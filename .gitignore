@@ -13,9 +13,7 @@
 **/.env.local
 
 # Databases / Temp files
-**/*.db
 **/*.db-journal
-**/uploads/
 **/.idea/
 **/.vscode/
 **/*.log
