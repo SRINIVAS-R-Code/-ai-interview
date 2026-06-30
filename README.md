@@ -17,36 +17,56 @@ A full-stack platform for students to practice mock interviews, solve coding cha
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Clone & Run Instructions
 
-### 1. Database Setup
-SQLite is self-contained. The database file `interview_prep.db` will be created automatically in the root backend folder on start. No database installation is required!
+To run this platform on another system, follow these simple steps:
 
-### 2. Configure Backend
+### 📋 Prerequisites
+Ensure you have the following installed:
+* **Java Development Kit (JDK) 17** or higher.
+* **Node.js** (v18 or higher) & **npm**.
+* **Git** installed.
 
+---
+
+### Step 1: Clone the Repository
+Clone the repository and navigate into the root directory:
 ```bash
-cd backend
-cp .env.example .env
-# Edit .env with your DB credentials, JWT secret, Cloudinary, Gemini API key
+git clone https://github.com/SRINIVAS-R-Code/-ai-interview.git
+cd -ai-interview
 ```
 
-### 3. Run Backend
+---
 
+### Step 2: Configure the Gemini API Key
+You need to set up your Gemini API Key in the backend configurations:
+1. Open [backend/src/main/resources/application.properties](file:///e:/ai%20%20interview%20paltfrom/backend/src/main/resources/application.properties)
+2. Locate line 24: `gemini.api.key=${GEMINI_API_KEY:your_gemini_api_key}`
+3. Replace `your_gemini_api_key` with your actual Google Gemini API Key (or set the `GEMINI_API_KEY` system environment variable).
+
+---
+
+### Step 3: Run the Spring Boot Backend
+Start the Java backend application:
 ```bash
 cd backend
 mvn clean install -DskipTests
 mvn spring-boot:run
-# Runs on http://localhost:8080
 ```
+* **Port:** The backend runs on [http://localhost:8085](http://localhost:8085).
+* **Database:** The local SQLite database `interview_prep.db` is already pre-seeded and pushed with **1,050+ aptitude questions**, **13 mock tests**, and **coding challenges**. You do not need to run any seeding scripts!
 
-### 4. Run Frontend
+---
 
+### Step 4: Run the React Frontend
+Open a new terminal window, navigate to the frontend folder, install packages, and start the development server:
 ```bash
 cd frontend
 npm install
 npm run dev
-# Runs on http://localhost:5173
 ```
+* **Port:** The frontend runs on [http://localhost:5173](http://localhost:5173).
+* **Accessing the App:** Open [http://localhost:5173](http://localhost:5173) in your browser. You can log in using the demo account credentials `fulltax@t.com` / `Test@1234` or register a new account.
 
 ---
 
@@ -65,7 +85,7 @@ GEMINI_API_KEY=your_gemini_key_from_aistudio.google.com
 ### Frontend (`frontend/.env.local`)
 
 ```env
-VITE_API_BASE_URL=http://localhost:8080/api
+VITE_API_BASE_URL=http://localhost:8085/api
 ```
 
 ---
