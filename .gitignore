@@ -1,0 +1,22 @@
+# Maven
+**/target/
+**/maven/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+
+# Node / Frontend
+**/node_modules/
+**/dist/
+**/.env
+**/.env.local
+
+# Databases / Temp files
+**/*.db
+**/*.db-journal
+**/uploads/
+**/.idea/
+**/.vscode/
+**/*.log
+**/*.tmp
